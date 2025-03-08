@@ -1,0 +1,240 @@
+/* general style changes */
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  h1,
+  h3 {
+    font-family: "Roboto", sans-serif;
+  }
+  
+  /* nav */
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #add8e6;
+    height: 50px;
+  }
+  
+  .nav-elements {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links {
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .nav-links:hover {
+    text-decoration: none;
+  }
+  
+  .profile-photo {
+    margin-top: 25px;
+    border-radius: 15px;
+    width: 360px;
+    height: 240px;
+    object-fit: cover;
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+    padding: 1rem;
+  }
+  
+  .portfolio {
+    text-align: left;
+    grid-row: 1;
+    grid-column: 1;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    background-color: #d3d3d3;
+  }
+  
+  .searchnews input {
+    width: 100%;
+    margin: 0.5rem 0 0.5rem 0;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border: 1px solid #eeeeee;
+  }
+  
+  .news {
+    text-align: left;
+    grid-row: 2;
+    grid-column: 1;
+    margin-top: 0;
+  }
+  
+  .searchprojects input {
+    width: 100%;
+    margin: 0.5rem 0 0.5rem 0;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border: 1px solid #eeeeee;
+  }
+  
+  .projects {
+    grid-row: 1 / span 2;
+    grid-column: 2;
+  }
+  
+  .contact i {
+    margin-right: 10px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  table,
+  th,
+  td {
+    border: 1px solid;
+    padding: 8px;
+  }
+  
+  th,
+  td {
+    text-align: left;
+  }
+  
+  h1,
+  h3 {
+    font-weight: 800;
+  }
+  
+  /* layout changes based on screen, for BOTH nav and columns 2 to 1, and vice versa*/
+  @media (max-width: 768px) {
+    #nav-toggle {
+      display: none;
+    }
+  
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      height: 50px;
+    }
+  
+    .nav-bar button {
+      background-color: #333333;
+      color: black;
+      font-size: 1.5rem;
+      border: none;
+      cursor: pointer;
+      display: block;
+    }
+  
+    .nav-elements {
+      display: none;
+      flex-direction: column;
+      background-color: #add8e6;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      text-align: left;
+      position: absolute;
+      margin-left: 10px;
+    }
+  
+    .nav-links {
+      padding: 15px;
+      text-decoration: none;
+      color: black;
+      font-weight: 600;
+    }
+  
+    .nav-links:hover {
+      background-color: #f0f0f0;
+    }
+  
+    .dropdown-button {
+      display: block;
+      background-color: #add8e6;
+      color: black;
+      padding: 10px;
+      cursor: pointer;
+    }
+  
+    .nav-bar:hover .nav-elements,
+    .nav-bar:focus-within .nav-elements {
+      /* stack overflow said focus-within allows dropdown to stay open */
+      display: flex;
+    }
+  
+    .nav-elements a {
+      padding: 10px;
+      text-align: left;
+      margin-left: 35px;
+      margin-bottom: 20px;
+    }
+  
+    main {
+      display: block;
+    }
+  
+    .portfolio,
+    .news,
+    .projects {
+      grid-column: 1;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .news {
+      margin-top: -30;
+    }
+  
+    #nav-toggle {
+      display: none;
+    }
+  
+    .dropdown-button {
+      display: none;
+    }
+  
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      height: 50px;
+    }
+  
+    .nav-elements {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      margin-left: 10px;
+    }
+  
+    .nav-links {
+      color: black;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  
+    .nav-links:hover {
+      text-decoration: none;
+      color: #f0f0f0;
+    }
+  }
+  
