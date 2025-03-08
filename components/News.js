@@ -1,4 +1,4 @@
-//news, newsitems
+// CONSIDER REMOVING THIS, so comment it out in data.json too
 export function renderNews(news) {
     return `
       <section class="news">
